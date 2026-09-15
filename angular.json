@@ -21,7 +21,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "ra",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -35,7 +35,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.css",
+              "src/styles/dark-mode.css",
+              "src/styles/variable.css"
             ]
           },
           "configurations": {
