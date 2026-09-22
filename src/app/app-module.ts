@@ -16,6 +16,7 @@ import { TextareaComponent } from './shared/textarea/textarea';
       theme: {
         preset: Aura,
       },
+      license: 'INSERTAR LICENCIA', // https://primeui.store/primeui
     }),
   ],
   bootstrap: [App],

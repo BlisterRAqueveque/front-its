@@ -1,10 +1,19 @@
-<p>Login works!</p>
+<p>
+  <b>{{ 'Test' }}</b>
+</p>
+<ra-input [id]="-1" [type]="'text'" [placeHolder]="'item.placeholder'" [(value)]="test" />
 
-<p><b>Username</b></p>
-<ra-input [type]="'text'" placeHolder="Ingrese nombre usuario" />
 <br />
-<p><b>Password</b></p>
-<ra-input [type]="'password'" placeHolder="Ingrese contraseña" />
-<br />
-<p><b>Edad</b></p>
-<ra-input type="number" placeHolder="Ingrese su edad" />
+@for (item of formulario; track $index) {
+  <p>
+    <b>{{ item.label }}</b>
+  </p>
+  <ra-input
+    [id]="$index"
+    [(type)]="item.type"
+    [placeHolder]="item.placeholder"
+    [(value)]="item.valor"
+  />
+}
+
+<button (click)="login()">LOGIN</button>

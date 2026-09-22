@@ -2,8 +2,12 @@
   <input
     id="input"
     [type]="type()"
-    class="rounded-md shadow-md border border-yellow-300 font-black p-2 placeholder:text-gray-300"
+    [class]="inputClass"
     [placeholder]="placeHolder()"
+    (focus)="test()"
+    (blur)="test2()"
+    [(ngModel)]="value"
+    (ngModelChange)="test3()"
   />
   @if (!esDatoCorrecto()) {
     <b class="text-sm text-red-400!">Datos de entrada incorrectos</b>

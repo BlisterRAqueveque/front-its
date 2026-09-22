@@ -9,7 +9,24 @@ export type TypeInput = 'text' | 'number' | 'password';
   templateUrl: './input.html',
 })
 export class InputComponent {
+  test() {
+    console.log('elemento focuseado', this.type());
+  }
+  test2() {
+    console.log('elemento perdió foco', this.type());
+  }
+  test3() {
+    console.log('Valor actual', this.value());
+  }
+
+  id = input<number>(0);
+
+  value = model<any>();
+
   esDatoCorrecto = signal<boolean>(true);
+
+  inputClass =
+    'rounded-md shadow-md border border-yellow-300 font-black p-2 placeholder:text-gray-300';
 
   /** two way binding  */
   type = model<TypeInput>('text');
