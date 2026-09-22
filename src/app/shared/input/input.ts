@@ -9,12 +9,6 @@ export type TypeInput = 'text' | 'number' | 'password';
   templateUrl: './input.html',
 })
 export class InputComponent {
-  comprobarDato($event: InputEvent) {
-    if (true) {
-      this.esDatoCorrecto.set(false);
-    }
-  }
-
   esDatoCorrecto = signal<boolean>(true);
 
   /** two way binding  */

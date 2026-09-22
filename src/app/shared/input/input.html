@@ -4,15 +4,18 @@
     [type]="type()"
     class="rounded-md shadow-md border border-yellow-300 font-black p-2 placeholder:text-gray-300"
     [placeholder]="placeHolder()"
-    (input)="comprobarDato($event)"
   />
   @if (!esDatoCorrecto()) {
     <b class="text-sm text-red-400!">Datos de entrada incorrectos</b>
   }
 
   @if (isPassword()) {
-    <div class="w-4 h-1 border absolute right-0 bottom-5 cursor-pointer" (click)="showPassword()">
-      EYE
+    <div class="absolute right-0 bottom-2.5 cursor-pointer" (click)="showPassword()">
+      @if (type() === 'password') {
+        <svg data-p-icon="eye" size="16"></svg>
+      } @else {
+        <svg data-p-icon="eye-slash" size="16"></svg>
+      }
     </div>
   }
 </div>
