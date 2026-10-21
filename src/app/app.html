@@ -1,1 +1,11 @@
+<p>Para trabajar con Cookies en Angular</p>
+<a href="https://www.npmjs.com/package/ngx-cookie-service" target="_blank"
+  >npm install ngx-cookie-service --save</a
+>
+
 <router-outlet />
+@if (!production) {
+  <div class="fixed bottom-0 left-0 right-0 bg-amber-300">
+    <p>{{ testing ? 'Ambiente de testing' : 'Ambiente de desarrollo local' }}</p>
+  </div>
+}

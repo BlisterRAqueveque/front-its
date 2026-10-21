@@ -6,6 +6,7 @@ import { App } from './app';
 import { AppRoutingModule } from './app-routing-module';
 import { InputModule } from './shared/input/input-module';
 import { TextareaComponent } from './shared/textarea/textarea';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [App],
@@ -18,6 +19,7 @@ import { TextareaComponent } from './shared/textarea/textarea';
       },
       license: 'INSERTAR LICENCIA', // https://primeui.store/primeui
     }),
+    CookieService,
   ],
   bootstrap: [App],
   exports: [App],
